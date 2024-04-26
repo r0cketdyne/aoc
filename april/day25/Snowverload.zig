@@ -1,3 +1,5 @@
+//We will start by reading the input and parsing it into a data structure that represents the connections between components.
+
 const std = @import("std");
 const io = std.io;
 const mem = std.mem;

@@ -1,8 +1,8 @@
 //We will start by reading the input and parsing it into a data structure that represents the connections between components.
 
-const std = @import("std");
-const io = std.io;
-const mem = std.mem;
+const std = @import("std");// in zig, we are importing some standard libs. to do that, we need to make variables at the stack, and make them consts, which are unchanged during prog execution
+const io = std.io; //here we are importing yet another lib, standard i/o like in c bc we actually need something to log to the terminal emulator here, or the "screen"
+const mem = std.mem; //not sure exactly what this standard lib does, but think it has something to do with memory. will update this comment later
 
 // Define a struct to represent a component and its connections
 const Component = struct {

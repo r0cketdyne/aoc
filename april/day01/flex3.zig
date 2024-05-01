@@ -12,4 +12,6 @@ pub fn main() void {
     // In Zig: std.log.info takes a format and a list of elements to print.
     info("hello world", .{});  // .{} is an empty anonymous tuple.
 }
-
+//this editor has colors right here; which is super cool. emacs is it's own universre, you can live in there but I mean this is simple to use
+//so for now; I'll just be using this. maybe I can install some EMACS plugins later to make it a bit better
+//but for now it's KAKOUNE

@@ -8,7 +8,7 @@ pub fn main() !void {
     const allocator = std.heap.page_allocator;
 
     // Fetch the content of the webpage
-    var pageContent = try getPageContent(allocator, "https://example.com");
+    var pageContent = try getPageContent(allocator, "https://adventofcode.com/2023/day/1/input");
 
     // Log the entire webpage content to standard output
     try IO.stdout.print("{}", .{pageContent});

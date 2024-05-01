@@ -21,7 +21,9 @@ pub fn main() void {
 
 
 
-//1. **Understand the Problem**: The problem provides a set of lines of text, each containing a specific calibration value. To find the calibration value for each line, we need to combine the first and last digits in that order to form a two-digit number. Then, we sum up all the calibration values to get the final result.
+//1. **Understand the Problem**: The problem provides a set of lines of text, each containing a specific calibration value.
+// To find the calibration value for each line, we need to combine the first and last digits in that order to form a two-digit number.
+//  Then, we sum up all the calibration values to get the final result.
 
 //2. **Read the Input**: Start by reading the calibration document, which consists of lines of text.
 

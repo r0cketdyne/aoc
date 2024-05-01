@@ -34,3 +34,12 @@ pub fn main() void {
 //5. **Output the Result**: Once the sum is calculated, output the final result, which is the sum of all calibration values.
 
 //6. **Solve the Problem**: Implement the steps described above in code to obtain the final solution.
+
+
+//soo first step is to import standard libs
+//take in a file, in this case scrape it from the website using curl
+//take the first and last digit of each line from scraped json
+//combine these to form to digit num, adding it to runnin total
+//when you have all these values, add them up. aggregator could work. maybe declare global counter and keep adding these nums from each line to it
+//log that counter to standard i/o.
+//seems simple enough. simplement in ZIGGIDY ZAG... Patchy QB's lang

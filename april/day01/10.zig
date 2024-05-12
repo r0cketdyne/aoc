@@ -11,7 +11,7 @@ pub fn main()!void { // Define the main function, which returns an error union
     const file = try fs.cwd().openFile(file_path,.{}); // Open file, handling errors with try. Don't know why try is necessary.
     defer file.close(); // Ensure the file is closed when done
 
-    var buf_reader = std.io.bufferedReader(file.reader()); // Create a buffered reader for efficiency
+    var buf_reader = std.io.bufferedReader(file.reader()); // Create a buffered reader for efficiency. is double buffering possible? what is utility of this anyways? it just takes more memory?
     const reader = buf_reader.reader(); // Get the underlying reader
 
     var line = std.ArrayList(u8).init(allocator); // Initialize an ArrayList to hold each line

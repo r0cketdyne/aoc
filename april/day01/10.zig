@@ -8,7 +8,7 @@ pub fn main()!void { // Define the main function, which returns an error union
     const allocator = gpa.allocator(); // Get the allocator instance
 
     const file_path = "puzzleinput.txt"; // Specify the path to the input file
-    const file = try fs.cwd().openFile(file_path,.{}); // Open the file, handling errors with try
+    const file = try fs.cwd().openFile(file_path,.{}); // Open file, handling errors with try. Don't know why try is necessary.
     defer file.close(); // Ensure the file is closed when done
 
     var buf_reader = std.io.bufferedReader(file.reader()); // Create a buffered reader for efficiency

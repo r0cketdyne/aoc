@@ -5,3 +5,6 @@ pub fn tokenizeAny(comptime T: type, buffer: []const T, delimiters: []const T) T
         .delimiter = delimiters,
     };
 }
+
+
+//file embed @embedFile("<path>")

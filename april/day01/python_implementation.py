@@ -1,11 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-Created on Mon May 27 09:49:13 2024
-
-@author: stephenson
-"""
-
 import re
 from pathlib import Path
 
@@ -39,15 +31,19 @@ def main():
     try:
         with open(file_path, 'r', encoding='utf-8') as file:  # Explicitly specify UTF-8 encoding
             # Iterate over each line in the file
-            for line in file:
-                print(f"Processing line: {line.strip()}")  # Debugging output
-                first_digit_front = find_first_digit_from_front(line)
-                first_digit_back = find_first_digit_from_back(line)
-                
-                if first_digit_front is not None and first_digit_back is not None:
-                    total_sum += first_digit_front + first_digit_back
-                
-                print(f"Front={first_digit_front}, Back={first_digit_back}")
+            for line_number, line in enumerate(file, start=1):
+                line = line.strip()  # Remove leading/trailing whitespaces
+                if line:  # Check if the line is not empty
+                    print(f"Processing line {line_number}: {line}")  # Debugging output
+                    first_digit_front = find_first_digit_from_front(line)
+                    first_digit_back = find_first_digit_from_back(line)
+                    
+                    if first_digit_front is not None and first_digit_back is not None:
+                        total_sum += first_digit_front + first_digit_back
+                    else:
+                        print(f"Warning: Skipping line {line_number}, no digits found.")
+                        
+                    print(f"Front={first_digit_front}, Back={first_digit_back}")
     except Exception as e:
         print(f"An error occurred: {e}")
     
@@ -56,3 +52,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+

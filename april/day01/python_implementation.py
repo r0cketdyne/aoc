@@ -32,18 +32,22 @@ def main():
     # Initialize the total sum
     total_sum = 0
     
+    # Debugging output
+    print("Starting file processing...")
+    
     # Open the file
     try:
-        with open(file_path, 'r') as file:
+        with open(file_path, 'r', encoding='utf-8') as file:  # Explicitly specify UTF-8 encoding
             # Iterate over each line in the file
-            for line_no, line in enumerate(file, start=1):
+            for line in file:
+                print(f"Processing line: {line.strip()}")  # Debugging output
                 first_digit_front = find_first_digit_from_front(line)
                 first_digit_back = find_first_digit_from_back(line)
                 
                 if first_digit_front is not None and first_digit_back is not None:
                     total_sum += first_digit_front + first_digit_back
                 
-                print(f"{line_no}: Front={first_digit_front}, Back={first_digit_back}")
+                print(f"Front={first_digit_front}, Back={first_digit_back}")
     except Exception as e:
         print(f"An error occurred: {e}")
     
@@ -52,4 +56,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-

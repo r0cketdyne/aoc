@@ -4,12 +4,12 @@
 if [[ -n $(git status -s) ]]; then
     echo "Changes detected, committing..."
     git add .
-    git commit -m "Yeet!"
+    git commit -m "this is retarded"
 fi
 
 # Push to GitHub
 echo "Pushing to GitHub..."
 git push origin HEAD
 
-echo "Yeeted successfully!"
+echo "this is retarded"
 
